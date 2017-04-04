@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Form Input and Output</title>
+    <style>
+        .error {
+            color: #990000;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Form Input and Output</h1>
+    <form action="http://bing.com" method="get">
+        <div id='div_bingQuery_submit'>
+            <label for="q">Bing query:</label>
+            <input type="text" name="q" id="q" value="" tabindex="1" />
+            <input type="submit" id="btn_submit" value="Submit" />
+        </div>
+        <div id='div_radio'>
+            <label for="r1">Choice 1</label>
+            <input type="radio" name="radio-choices" id="r1" tabindex="2" value="radio-choice-1" />
+            <label for="r2">Choice 2</label>
+            <input type="radio" name="radio-choices" id="r2" tabindex="3" value="radio-choice-2" />
+        </div>
+        <div id='div_select'>
+            <label for="select-choice">Dropdown Choice:</label>
+            <select name="select-choice" id="select-choice">
+                <option value="o1">DD Choice 1</option>
+                <option value="o2">DD Choice 2</option>
+                <option value="o3">DD Choice 3</option>
+            </select>
+        </div>
+        <div id='div_textarea'>
+            <label for="textarea">Textarea:</label>
+            <textarea cols="40" rows="4" name="textarea" id="textarea"></textarea>
+        </div>
+        <div id='div_checkboxes'>
+            <label for="checkbox1">Checkbox 1:</label>
+            <input type="checkbox" name="checkbox1" id="checkbox1" value='checkbox 1' />
+            <label for="checkbox2">Checkbox 2:</label>
+            <input type="checkbox" name="checkbox2" id="checkbox2" value='checkbox 2' />
+        </div>
+        <div id='div_showData'>
+            <button id='btn_showData'>Show data</button>
+        </div>
+    </form>
+    <div id='dataDiv' />
+    <script>
+        // -------------------------- utility functions
+        function initializeFormData() {
+            document.querySelector('#q').value = 'JavaScript';
+            document.querySelector('#r2')
+                .checked = true;
+            document.querySelector('option[value="o2"]')
+                .selected = true;
+            document.querySelector('#textarea')
+                .value = 'This is a text area.';
+            document.querySelector('#checkbox1')
+                .checked = true;
+        }
+
+        //-------------------------- error event handlers
+        //$('form').submit(function (e) {
+        //    if (error) {
+        //        return false;
+        //    }
+        //    showEventInfo(e);
+        //    $(this).find(':text, #textarea').each(
+        //        function (index, item) {
+        //            runRuleTextBoxGTE5charsOn($(item));
+        //            runRuleRequiredTextOn($(item));
+        //        });
+        //});
+        //
+        //$(':text, #textarea').blur(function (e) {
+        //    showEventInfo(e);
+        //    if ($(this).val().length === 0) {
+        //        addErrorSpanAfter($(this));
+        //    }
+        //});
+        //
+        //$(':text , #textarea').focus(function (e) {
+        //    showEventInfo(e);
+        //    removeErrorSpanAfter($(this));
+        //});
+
+
+        function showEventInfo(e) {
+            console.info(
+                " event:", e.type,
+                "\n target.id:", e.target.id,
+                "\n target.nodeName:", e.target.nodeName
+            );
+        }
+
+        function showFormData(e) {
+            e.preventDefault();
+            showEventInfo(e);
+            console.log('Appending form data...');
+            var dataDiv = document.querySelector('#dataDiv');
+            dataDiv.innerHTML = '<h2>Form data</h2>';
+            dataDiv.innerHTML += '<ul>';
+            dataDiv.innerHTML += '<li>Text field =  ' + document.querySelector('#q').value + '</li>';
+            dataDiv.innerHTML += '<li>Radio button =  ' +
+                document.querySelector('[name="radio-choices"]:checked').value + '</li>';
+            dataDiv.innerHTML += '<li>Dropdown = ' +
+                document.querySelector('#select-choice').value + ' </li>';
+            dataDiv.innerHTML += '<li>Textarea = ' +
+                document.querySelector('#textarea').value + ' </li>';
+            dataDiv.innerHTML += '<li>Checkbox 1 is ' +
+                (document.querySelector('#checkbox1').checked ? 'checked' : 'unchecked') + ' </li>';
+            dataDiv.innerHTML += '</ul>';
+        }
+
+        function runRuleRequiredTextOn($element) {
+            if ($element.value.length === 0) {
+                $element.style.border = '2px solid red';
+            } else {
+                $element.style.border = '';
+            }
+        }
+
+        function runRuleTextBoxGTE5charsOn($element) {
+            if ($element.value.length < 5) {
+                addErrorSpanAfter($element);
+                $element.focus();
+            } else {
+                removeErrorSpanAfter($element);
+            }
+        }
+
+        function addErrorSpanAfter($element) {
+            error = true;
+            $element.classList.add('error');
+            $element.insertAdjacentHTML('afterend', '<span class="error">This field has a problem.</span>');
+        }
+
+        function removeErrorSpanAfter($element) {
+            error = false;
+            $element.classList.remove('error');
+            $element.querySelector('span').remove();
+        }
+
+        //-------------------------- UI event binding
+        var btn_showData = document.querySelector('#btn_showData');
+        btn_showData.onclick = showFormData;
+        //-------------------------- initialize variables and form fields
+        var error = false;
+        initializeFormData();
+    </script>
+</body>
+
+</html>
