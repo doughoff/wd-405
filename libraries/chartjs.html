@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Chart.js</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <style>
+        canvas {
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Chart.js</h1>
+    <div style="width:100%;">
+        <canvas id="canvas"></canvas>
+    </div>
+</body>
+<script>
+    // http://www.chartjs.org/
+    var ctx = document.getElementById("canvas").getContext("2d");
+    var lineChart = new Chart(ctx, {
+        "type": "line",
+        "data": {
+            "labels": ["January", "February", "March", "April", "May", "June", "July", "Aug", "Sep", "Oct", "Nov", "Dec"],
+            "datasets": [{
+                "label": "My First Dataset",
+                "data": [65, 59, 120, 81, 56, 55, 40, 65, 59, 140, 81, 56],
+                "fill": true,
+                "borderColor": "hsl(180, 50%, 50%)",
+                "lineTension": 0.2 // more for curves
+            }, {
+                "label": "My Second Dataset",
+                "data": [106, 135, 110, 125, 139, 120, 91, 106, 140, 110, 125, 139],
+                "fill": true,
+                "borderColor": "hsl(220, 50%, 70%)",
+                "lineTension": 0.3
+            }]
+        },
+        "options": {
+
+        }
+    });
+</script>
+
+</html>
