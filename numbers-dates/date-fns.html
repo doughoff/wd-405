@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DateFNS</title>
+    <link rel="stylesheet" href="">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/date-fns/1.28.4/date_fns.min.js"></script>
+</head>
+
+<body>
+    <h1>DateFNS</h1>
+</body>
+<script>
+    // https://date-fns.org/
+    var dateFormatString = 'MMMM D, YYYY';
+    var dateTimeFormatString = 'MMMM Do, YYYY H:mm a';
+    var startOfToday = dateFns.startOfToday();
+    var thisYear = dateFns.getYear(new Date());
+    var nextChristmas = new Date(thisYear, 11, 25);
+    var timeUntilChristmas = dateFns.distanceInWordsToNow(nextChristmas);
+
+    console.log('Today started at', startOfToday);
+    console.log('Current date and time is', dateFns.format(new Date(), dateTimeFormatString));
+    console.log("The date of next Christmas is", dateFns.format(nextChristmas, dateFormatString));
+    console.log('Christmas will be in about', timeUntilChristmas);
+</script>
+
+</html>

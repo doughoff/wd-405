@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Nested Calls</title>
+    <script>
+        function hey(you) {
+            alert('hey! ' + you);
+            console.log('hey ' + you);
+        }
+
+        function beAlert(aPerson) {
+            hey(aPerson);
+            console.log('beAlert ' + aPerson);
+        }
+
+        function makeStuffHappenTo(who) {
+            hey(who);
+            beAlert(who);
+            console.log('makeStuffHappenTo ' + who);
+        }
+
+        //--------------------------------------- tests
+        hey('Doug');
+        beAlert('Doug');
+        makeStuffHappenTo('Doug');
+    </script>
+</head>
+
+<body>
+    <h1>Nested Calls</h1>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function fadeElement(element) {
+            console.log('Fading element', element);
+            var currentOpacity = parseFloat(window.getComputedStyle(element)["opacity"], 10);
+            var newOpacity = currentOpacity * .60;
+            var currentFontSizeNoPx = parseFloat(window.getComputedStyle(element)["font-size"], 10);
+            var newFontSize = (currentFontSizeNoPx * .85) + 'px';
+            element.style.opacity = newOpacity;
+            element.style.fontSize = newFontSize;
+            console.log('new opacity is', newOpacity, ', new font size is ', newFontSize);
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Fade element</h1>
+    <button onclick="fadeElement(document.querySelector('h1'));">Fade the headline</button>
+
+</body>
+
+</html>
