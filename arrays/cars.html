@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array of cars</title>
+    <script>
+        var arrayOfCars = ['BMW', 'Volvo', 'Saab', 'Ford'];
+        arrayOfCars['dealer'] = "Hoff Cars";
+        var i = 0;
+        while (arrayOfCars[i]) {
+            document.write(arrayOfCars[i] + "<br>"); i++;
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Array of cars</h1>
+</body>
+<script>
+        // rerun with for-in
+        for (var item in arrayOfCars) {
+            document.write(arrayOfCars[item] + "<br>");
+        }
+
+</script>
+
+</html>
