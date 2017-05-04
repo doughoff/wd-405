@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Append clicked text to body</h1>
+    <div>
+        <span id="span1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ipsam modi, deleniti sed tenetur rem libero eos est quos! Reiciendis debitis sed accusamus alias aperiam ipsum nobis illum voluptatem suscipit?</span>
+        <span id="span2">Possimus dolor id a. Maxime optio minima amet in unde voluptatibus esse aspernatur iure cumque similique quos excepturi odio accusamus omnis, quas numquam hic eius, vel facilis magnam labore dolore.</span>
+        <span id="span3">Aut velit quod dolorum ad, consectetur veniam ipsam quidem voluptate repudiandae labore sit architecto non aperiam distinctio. Alias consectetur animi expedita tenetur dicta, illum fugit, commodi, earum neque minus adipisci.</span>
+        <span id="span4">Praesentium culpa, debitis libero. Eveniet facilis obcaecati tenetur, fuga quisquam soluta explicabo illum iure. Animi perferendis consequatur quo, saepe consectetur vitae ratione sit, nesciunt veritatis ipsa corporis itaque! Possimus, facilis.</span>
+        <span id="span5">Aperiam ratione quas, doloribus repudiandae eligendi excepturi libero eum dicta placeat facere quidem numquam quo nam voluptatem odio. Nesciunt soluta quos quisquam quidem accusantium nam non blanditiis beatae optio provident!</span>
+        <span id="span6">Officia nisi animi dignissimos neque, nam itaque tempore magnam reiciendis illum, alias amet deleniti est, maxime laborum asperiores veritatis ipsa. Sapiente ut, nobis? Unde, corporis, minima. Dolore praesentium sit debitis.</span>
+        <span id="span7">Doloremque libero rem nulla odit quaerat magnam aliquam alias laborum nisi obcaecati deleniti repellendus, placeat debitis possimus nemo natus illo nesciunt ea nobis quisquam. Itaque reiciendis nisi ad labore ipsa.</span>
+        <span id="span8">Maxime voluptate quia, porro architecto nostrum eveniet beatae unde voluptatem sapiente rerum praesentium eius aliquam ullam deleniti autem accusantium repellendus facere obcaecati sequi possimus. Voluptate ex enim cum, facere vitae!</span>
+        <span id="span9">Praesentium consectetur provident voluptate officiis omnis nisi ullam, ab amet quae eos harum cum. Natus illum dolores, porro modi sapiente optio officiis asperiores, pariatur quos repellendus est quam quis. Libero.</span>
+        <span id="span10">Quis nesciunt, quo sed? Nulla enim repellendus exercitationem incidunt. At sequi rerum esse incidunt dolor. Laudantium minima a necessitatibus tenetur, recusandae officia alias illum ut, explicabo odit quibusdam sequi at?</span>
+        <span id="span11">Distinctio similique, dolorem? Saepe laboriosam iste omnis dolores labore, a id ex ut eius nostrum ab sapiente nisi vel necessitatibus rem expedita repellat error porro cupiditate! Deserunt quidem dolorem quas!</span>
+        <span id="span12">Vitae enim repellat, neque ad impedit atque dicta, dolore aut aperiam natus autem, dignissimos et ex nam tempore sed ducimus aliquid rerum, rem quidem corporis. Recusandae delectus nam quia obcaecati!</span>
+        <span id="span13">Nihil a sit nam quas quaerat tenetur, asperiores dolorem ex minima in quisquam, velit aperiam consequuntur totam, dolores magni nostrum enim architecto expedita sequi ut cum distinctio blanditiis! Ullam, voluptates!</span>
+        <span id="span14">Sapiente blanditiis minima, labore ullam doloremque optio possimus laboriosam. Nemo, sunt nisi dolorum illo recusandae provident ratione delectus! Consequatur soluta adipisci tenetur minima, maxime voluptate non enim iusto itaque impedit.</span>
+        <span id="span15">Distinctio laudantium voluptatibus consequatur porro quos quibusdam fuga at blanditiis. Nisi alias voluptatum nesciunt neque quis sit laborum illum autem fuga explicabo, aperiam, illo. Illo, rem iure aliquid eum quisquam.</span>
+        <span id="span16">Expedita excepturi provident accusamus error unde aspernatur, asperiores explicabo ab ipsam assumenda corporis incidunt, velit. Exercitationem aliquid beatae architecto illum animi, dolore numquam at perferendis cupiditate necessitatibus consequatur nulla voluptatum?</span>
+        <span id="span17">Dignissimos autem in non, cum, nostrum commodi quam ipsa nesciunt id maxime amet nam, nobis molestias aut. Voluptas fugiat aliquam fuga sint at, veniam libero dolorem ratione quas. Optio, distinctio.</span>
+        <span id="span18">Rerum eaque voluptas ut beatae iste dicta tenetur alias quod assumenda tempora nulla, inventore culpa voluptate quas ratione perspiciatis quisquam quis officiis reprehenderit deleniti. Quaerat, repellendus necessitatibus a doloremque iure.</span>
+        <span id="span19">Similique totam voluptatibus laborum aspernatur nam voluptas illum, praesentium, enim adipisci omnis blanditiis quam veritatis inventore repellat aut molestiae error nulla hic earum voluptatum in porro. Totam unde odit natus?</span>
+        <span id="span20">Voluptatum facere numquam consequuntur veniam, deserunt adipisci provident nobis debitis vitae odio impedit placeat labore, vero suscipit ab. Vel dolorum a voluptatibus quidem eius consectetur consequatur saepe rerum cum expedita!</span>
+    </div>
+    <script>
+        // create function
+        function appendTextToBody(e) {
+            // 1. get the text of element
+            // a. retrieve target element
+            var element = e.target || e.srcElement;
+            // b. save element's text
+            var elementText = element.innerText;
+            // 2. create div and put text in
+            // create var with document.createElement('div')
+            var newDiv = document.createElement('div');
+            // add text with var.innerHtml = ' '
+            newDiv.innerHTML = elementText;
+            newDiv.style.backgroundColor = 'yellow';
+            // 3. append div to bottom of body
+            // a. select body and create var
+            var body = document.querySelector('body');
+            // b. append div to body
+            body.appendChild(newDiv);
+        }
+        // bind function to body on click
+        var body = document.querySelector('body');
+        body.addEventListener('click', appendTextToBody);
+    </script>
+
+</body>
+
+</html>
