@@ -35,6 +35,10 @@
     <script>
         // create function
         function appendTextToBody(e) {
+            // prevent any parent listener from hearing
+            e.stopPropagation();
+            // prevent any links or buttons from taking action
+            e.preventDefault();
             // 1. get the text of element
             // a. retrieve target element
             var element = e.target || e.srcElement;
