@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Test</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script>
+        $(function(){
+            // this anonymous function causes jQuery
+            // to do this after page loads...
+            $('h1').text("jQuery was here!")
+            $('body').append('<div>This is new content</div>');
+            $('h1').click(function(){
+                $(this).fadeOut(5000);
+            })
+
+        })
+    </script>
+
+</head>
+<body>
+    <h1>jQuery Test</h1>
+
+</body>
+</html>
