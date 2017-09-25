@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="../js/stretchy.js"></script>
+    <title>Stretchy example</title>
+    <style>
+        input {
+            min-width: 10rem;
+            max-width: 20rem;
+        }
+        
+        textarea {
+            width: 20rem;
+        }
+        
+        .centered {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>
+        Stretchy example
+    </h1>
+    <form class='centered' action="">
+        <input type="text" placeholder="What's your name?"><br>
+
+
+    </form>
+</body>
+<script>
+    document.querySelector('input').focus();
+
+</script>
+
+</html>
