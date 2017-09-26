@@ -1,4 +1,5 @@
 // doubleMe.js
+// console only version
 
 function doubleMe(aNumber) {
     return aNumber * 2;
