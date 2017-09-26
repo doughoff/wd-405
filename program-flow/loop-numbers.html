@@ -7,28 +7,29 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Loop numbers</title>
     <script>
+        console.warn('Here comes some possible buggy loops...');
         var rule = '-------------------------------------------------------';
         // goes from 1 to 25
-        console.log('Printing 1 to 25 --------------------------');
+        console.info('Printing 1 to 25 --------------------------');
         for (var i = 1; i <= 25; i++) {
             console.log(i);
         }
         console.log(rule);
 
         // goes from 25 to 1
-        console.log('Printing 25 to 1 --------------------------');
+        console.info('Printing 25 to 1 --------------------------');
         for (var i = 25; i >= 1; i--) {
             console.log(i);
         }
         console.log(rule);
 
         // goes from 1 to 50 by 2s
-        console.log('Printing 1 to 50 by 2s --------------------------');
+        console.info('Printing 1 to 50 by 2s --------------------------');
         for (var i = 1; i <= 50; i = i + 2) {
             console.log(i);
         }
         // 50 will not print because it's even.
-        console.log(rule);
+        console.info(rule);
 
         // goes from 1 to 10 by .5
         console.log('Printing 1 to 10 by .5 --------------------------');
