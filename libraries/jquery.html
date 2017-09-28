@@ -8,9 +8,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script>
         $(function(){
+            // or jQuery(function(){ ...})
             // this anonymous function causes jQuery
             // to do this after page loads...
             $('h1').text("jQuery was here!")
+            // $('h1')[0].innerText('');  // change jQuery object to JS
+            // document.getElementsByTagName('h1')[0].innerText(''); // JS only
+
             $('body').append('<div>This is new content</div>');
             $('h1').click(function(){
                 $(this).fadeOut(5000);
@@ -23,5 +27,9 @@
 <body>
     <h1>jQuery Test</h1>
 
+    <script>
+        // you don't need the document ready function here.
+        // the above $(function(){...}) will execute here
+    </script>
 </body>
 </html>
