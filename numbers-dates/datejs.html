@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/datejs/1.0/date.min.js"></script>
+
+    <title>DateJS</title>
+</head>
+
+<body>
+    <h1>DateJS</h1>
+    <script>
+        // What date is next thursday?
+        Date.today().next().thursday();
+
+        // Add 3 days to Today
+        Date.today().add(3).days();
+
+        // Is today Friday?
+        Date.today().is().friday();
+
+        // Number fun
+        (3).days().ago();
+
+        // 6 months from now
+        var n = 6;
+        n.months().fromNow();
+
+        // Set to 8:30 AM on the 15th day of the month
+        Date.today().set({ day: 15, hour: 8, minute: 30 });
+
+        // Convert text into Date
+        Date.parse('today');
+        Date.parse('t + 5 d'); // today + 5 days
+        Date.parse('next thursday');
+        Date.parse('February 20th 1973');
+        Date.parse('Thu, 1 July 2004 22:30:00');
+    </script>
+</body>
+
+</html>

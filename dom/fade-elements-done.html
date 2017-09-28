@@ -43,7 +43,7 @@
 <script>
         function fadeParagraphs() {
             // get every paragraph
-            var paragraphs = document.querySelectorAll('p');
+            var paragraphs = document.getElementsByTagName('p');
             for (eachParaKey in paragraphs) {
                 // fade each paragraph
                 fadeElement(paragraphs[eachParaKey]);
