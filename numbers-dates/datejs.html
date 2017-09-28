@@ -15,13 +15,16 @@
     <h1>DateJS</h1>
     <script>
         // What date is next thursday?
-        Date.today().next().thursday();
+        var nextThurs = Date.today().next().thursday();
+        console.log("Next Thursday", nextThurs);
 
         // Add 3 days to Today
-        Date.today().add(3).days();
-
+        var threeDaysFromNow = Date.today().add(3).days();
+        console.log("3 days from now", threeDaysFromNow);
+        
         // Is today Friday?
-        Date.today().is().friday();
+        var isTodayFriday = Date.today().is().friday();
+        console.log('Is today Friday?', isTodayFriday ? "yea!!!": "not yet");
 
         // Number fun
         (3).days().ago();
