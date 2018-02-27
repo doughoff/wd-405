@@ -3,6 +3,7 @@
 
 console.log(Math.sqrt(4));
 console.log(Math.random());
+    console.log(((Math.random() * 100) + 1) | 0);
 console.log(Math.pow(2,8));
 console.log(Math.round(2.4));
 console.log(Math.abs(-2.7));
