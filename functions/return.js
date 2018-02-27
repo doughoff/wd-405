@@ -4,7 +4,7 @@ function showMyName(){
     // log a value while executing
     console.log('My name is Doug.');
     // send output to caller
-    return false;
+    return 'this is the returned value';
   }
 // execute without using return value
 // function turns into value and ourput is not used
