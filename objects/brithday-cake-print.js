@@ -21,7 +21,7 @@ function printProperties(o, name) {
     console.log('----------------------------- properties of', name);
     for (key in o) {
         if (typeof o[key] === 'object') {
-            printProperties(o[key], name + '.' + key);
+            printProperties(o[key], name + '.' + key);  // recursion
         } else if (typeof o[key] === 'function') {
             console.log(key + '()');
         } else {
