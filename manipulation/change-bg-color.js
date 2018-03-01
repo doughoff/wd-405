@@ -11,6 +11,10 @@ var header = document.querySelector('header');
 
 // set the container's background color based on how much has scrolled off
 // window.scrollY in pixels
-var hue = (32 + scrollY) % 360;
-header.style.backgroundColor = 'hsla('+ hue + 
-', 98%, 55%, 0.38)';
+function changeHue(event) {
+    var slowDownRate = .08;
+    var hue = (32 + (scrollY * slowDownRate)) % 360;
+    header.style.backgroundColor = 'hsla(' + hue +
+        ', 98%, 55%, 0.50)';
+}
+document.onscroll = changeHue;

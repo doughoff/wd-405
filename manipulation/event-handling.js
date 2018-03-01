@@ -19,8 +19,9 @@ function changeAnyInnerHtml(event) {
 document.onclick = changeAnyInnerHtml;
 
 // show the current location of the cursor before the H1 text as x,y
+var headlineText = document.querySelector('h1.message.white').innerHTML;
 function updateHeadlineText(event){
     var headline = document.querySelector('h1.message.white');
-    headline.innerHTML = event.x + ','+ event.y + headline.innerHTML;
+    headline.innerHTML = event.x + ','+ event.y + headlineText;
 }
 document.onmousemove = updateHeadlineText;
