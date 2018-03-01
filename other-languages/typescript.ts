@@ -8,6 +8,9 @@ class Dog {
     get name(): string {
         return this._name;
     }
+    get misterName(): string {
+        return 'Mr. ' + this._name;
+    }
     set name(name: string) {
         this._name = name;
     }
@@ -18,3 +21,4 @@ class Dog {
 
 let fido = new Dog("Fido");
 fido.bark();
+console.log(fido.misterName);
