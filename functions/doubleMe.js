@@ -1,11 +1,12 @@
 // doubleMe.js
+// execute in browser
 
 function doubleMe(aNumber) {
     return aNumber * 2;
 }
 
-doubleMe;  // shows the function
-doubleMe();
+doubleMe;       // show the function
+doubleMe();     // call the function
 doubleMe(3);
 doubleMe(3, 4);
 
