@@ -1,5 +1,7 @@
 // nested-calls.js
+// load all the functions in a browser at once
 
+//-------------------------------------- functions
 function hey(you) {
     alert('hey! ' + you);
     console.log('hey ' + you);
@@ -17,6 +19,8 @@ function makeStuffHappenTo(who) {
 }
 
 //--------------------------------------- tests
+// test each line in the browser
+
 hey('Doug');
 beAlert('Doug');
 makeStuffHappenTo('Doug');
