@@ -11,5 +11,5 @@ isTotallyTrue && console.log('duuuude!');  // better
 empty = '';
 empty.length && console.log(empty.search('a'))
 
-console.log && console.log(“This function exists!”);
+console.log && console.log("This function exists!");
 
