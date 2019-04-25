@@ -1,3 +1,4 @@
+// image-replacement.js
 // ssa.gov
 var card = document.querySelectorAll('img')[14];
 var dog = 'http://www.iconarchive.com/download/i107326/google/noto-emoji-animals-nature/22215-dog.ico';

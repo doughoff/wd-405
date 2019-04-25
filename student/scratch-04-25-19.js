@@ -82,3 +82,35 @@ body.insertAdjacentElement('beforeend', header);
 // set the input text field value
 // google.com or bing.com
 document.querySelector('[name=q]').value = 'JavaScript';
+
+// ------------------------------------------------events
+
+// make the H1 clickable
+// centriq.com
+var h1 = document.querySelector('h1');
+function goToGoogle(){
+     window.location = 'http://google.com';
+}
+h1.onclick = goToGoogle;
+// give feedback on hover
+h1.onmouseover = function(){ h1.style.border = 'blue 2px solid';}
+h1.onmouseout  = function(){ h1.style.border = ''}
+h1.style.cursor = 'pointer';
+
+// -------------------------------------- google hover over logo
+// Add an event handler to Google’s logo 
+// to tell you when you move the mouse over it.
+// console.log the message
+// use a mouseover event
+
+// select the logo
+var logo = document.querySelector('#hplogo');
+
+// write the function (event handler)
+function logMessage(event){
+     console.log('Cursor is over logo.');
+     console.log(event);
+}
+
+// bind the element and the function
+logo.onmouseover = logMessage;
