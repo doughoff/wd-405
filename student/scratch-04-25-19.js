@@ -78,3 +78,7 @@ var header = document.querySelector('header');
 header.style.position = 'relative';
 var body = document.querySelector('body');
 body.insertAdjacentElement('beforeend', header);
+
+// set the input text field value
+// google.com or bing.com
+document.querySelector('[name=q]').value = 'JavaScript';
