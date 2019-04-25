@@ -71,3 +71,10 @@ nodeToClone.insertAdjacentElement('afterend', clonedH1);
 // move to before the original h1
 // insert moves items already in the DOM
 nodeToClone.insertAdjacentElement('beforebegin', clonedH1);
+
+// move header to bottom of page
+// centriq.com
+var header = document.querySelector('header');
+header.style.position = 'relative';
+var body = document.querySelector('body');
+body.insertAdjacentElement('beforeend', header);
