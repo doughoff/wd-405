@@ -114,3 +114,26 @@ function logMessage(event){
 
 // bind the element and the function
 logo.onmouseover = logMessage;
+
+
+// Create an event handler for a document click event anywhere 
+//    on the html
+// log the x and y coordinates
+// log the element that was clicked on
+// Add the function to the mouseover event
+// load any page
+var html = document.querySelector('body');
+function mouseover(e){
+     console.log(e.screenX, e.screenY);
+     console.dir(e.target);
+}
+html.onmouseover = mouseover;
+
+//---------------------------- Date functions
+new Date()
+new Date().toTimeString()
+new Date().toDateString()
+new Date().toLocaleString()
+new Date().toLocaleDateString()
+new Date().toLocaleTimeString()
+
