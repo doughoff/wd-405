@@ -36,3 +36,38 @@ for (var eachKey in divs) {
     var div = divs[eachKey]
     div['style'] = 'border: 5px fuchsia dotted';
 }
+
+
+// get the text of the document body
+document.querySelector('body').textContent
+
+// set the text of some element
+var newHTML = 'This is <b>NEW</b> text.';
+document.querySelector('body').innerHTML = newHTML;
+
+// remove a node/element
+// centriq.com
+var child = document.querySelector('h1');
+console.log('removing the H1 that says', child.innerText);
+var parent = child.parentNode;
+parent.removeChild(child);
+
+
+// create a node
+var h1 = document.createElement('h1');
+h1.innerHTML = "My <b>new</b> headline";
+h1.className = 'big-bold';              // fake CSS name
+h1.id = 'js-h1';
+
+// clone a node - better
+var nodeToClone = document.querySelector('h1');
+var clonedH1 = nodeToClone.cloneNode(true);
+clonedH1.innerHTML = "My <b>new</b> headline";
+clonedH1.id = 'js-h1';
+
+// place the cloned node after the original h1
+nodeToClone.insertAdjacentElement('afterend', clonedH1);
+
+// move to before the original h1
+// insert moves items already in the DOM
+nodeToClone.insertAdjacentElement('beforebegin', clonedH1);
